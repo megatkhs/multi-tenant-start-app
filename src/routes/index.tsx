@@ -3,7 +3,6 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   component: Home,
   loader: async ({ context }) => {
-    console.log("Context Tenant:", context.tenant);
     if (!context.tenant) {
       throw notFound();
     }
